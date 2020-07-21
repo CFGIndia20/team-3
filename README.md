@@ -1,6 +1,8 @@
 whatsapp group link: https://chat.whatsapp.com/EPso5GSCAPP5Oumq3Wbb9E
 
 Kindly join the group as soon as possible
+Guys do join the group asap.
+If you'll are not able to join the group please call us.
 
 Hi,Folks
 I am Jaya Tanwani from VESIT, Mumbai.
