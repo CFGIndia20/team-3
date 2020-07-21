@@ -1,3 +1,7 @@
+whatsapp group link: https://chat.whatsapp.com/EPso5GSCAPP5Oumq3Wbb9E
+
+Kindly join the group as soon as possible
+
 Hi,Folks
 I am Jaya Tanwani from VESIT, Mumbai.
 let's first do the introduction & connect as soon as possible,
