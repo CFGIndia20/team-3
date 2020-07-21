@@ -11,4 +11,7 @@ I am Dikshita Patel from S.P.I.T, Mumbai.
 My contact: +91-7506204088 / 7021805126
 Linkedln: https://www.linkedin.com/in/dikshita-patel-a87857160/
 
-
+Hey,
+I am Tirth Parekh from S.P.I.T. Mumbai
+My contact - 9821675495
+LinkedIn: https://www.linkedin.com/in/tirth-parekh-9383881b2/
