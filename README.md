@@ -21,3 +21,8 @@ Hey,
 I am Tirth Parekh from S.P.I.T. Mumbai
 My contact - 9821675495
 LinkedIn: https://www.linkedin.com/in/tirth-parekh-9383881b2/
+
+Hey,
+I am Sugam Kumar from RVCE, Bengaluru
+My contact - 8884433352
+LinkedIn: https://www.linkedin.com/in/sugam-kumar/
