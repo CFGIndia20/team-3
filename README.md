@@ -26,3 +26,8 @@ Hey,
 I am Sugam Kumar from RVCE, Bengaluru
 My contact - 8884433352
 LinkedIn: https://www.linkedin.com/in/sugam-kumar/
+
+Hi,
+I am Puspa Lamichhane from VIT, Vellore.
+My contact number: 8220208429
+LinkedIn Url: https://www.linkedin.com/in/puspa-lamichhane-351710178/
