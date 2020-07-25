@@ -17,11 +17,12 @@ const routing = (
 
     <div>
       <Header />
-      <hr />
+      <hr/>
+  
       <Switch>
 
-        <Route exact path="/" component={App} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Login} /> 
+        <Route exact path="/app" component={App} />
         <Route exact path="/patients-list" component={Patients} />
         <Route exact path="/donors-list" component={Donors} />
         <Route exact path="/questionare" component={Add_Question} />
@@ -32,6 +33,6 @@ const routing = (
   </Router>
 );
 ReactDOM.render(
-  <Login/>,
+  routing,
   document.getElementById('root')
 );
