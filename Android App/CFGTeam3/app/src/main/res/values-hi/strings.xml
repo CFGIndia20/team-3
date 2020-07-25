@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CFGTeam3</string>
+    <string name="admin_login">व्यवस्थापक लॉगिन</string>
+    <string name="submit">दर्ज करे</string>
+    <string name="thank_you_for_the_feedback">धन्यवाद प्रतिक्रिया देने के लिए!</string>
+    <string name="finish">समाप्त</string>
+    <string name="feedback_message">हनमस्कार! सेंट जुड इंडिया चाइल्डकेयर सेंटर आपकी मदद करने के लिए तैयार है। कृपया हमें अपनी बहुमूल्य प्रतिक्रिया प्रदान करने में एक मिनट का समय लें!</string>
+    <string name="q1">रहने की व्यवस्था</string>
+    <string name="q2">रसोई की सुविधा</string>
+    <string name="q3">बाथरूम की सुविधा</string>
+    <string name="q4">पोषक तत्वों की खुराक</string>
+    <string name="q5">संक्रमण नियंत्रण के उपाय</string>
+</resources>

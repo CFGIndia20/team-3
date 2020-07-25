@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CFGTeam3</string>
+    <string name="admin_login">प्रशासक लॉगिन</string>
+    <string name="submit">सबमिट करा</string>
+    <string name="thank_you_for_the_feedback">अभिप्रायाबद्दल धन्यवाद!</string>
+    <string name="finish">समाप्त</string>
+    <string name="feedback_message">नमस्कार! सेंट जूड इंडिया चाईल्ड केअर सेंटर तुम्हाला मदत करण्यासाठी आनंदित आहेत. कृपया आपला बहुमूल्य अभिप्राय आम्हाला देण्यासाठी एक मिनिट घ्या!</string>
+    <string name="q1">राहण्याची व्यवस्था</string>
+    <string name="q2">स्वयंपाकघर सुविधा</string>
+    <string name="q3">स्नानगृह सुविधा</string>
+    <string name="q4">पौष्टिक पूरक</string>
+    <string name="q5">संक्रमण नियंत्रण उपाय</string>
+</resources>

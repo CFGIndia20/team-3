@@ -5,8 +5,8 @@ class App extends React.Component {
   render(){
     
   return (
-    <div>
-     Image
+    <div style={{paddingTop:"0px"}}>
+      <img src={require('./images/bg.jpg')} style={{width:"100%", height:"100%"} }/>
      </div>
    
   );
