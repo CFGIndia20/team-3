@@ -11,7 +11,15 @@ function Header(){
                       
                             <Navbar bg="dark" variant="dark" expand="xl" sticky="top" style={{position:"fixed" ,width:"100%" }}>
 
-                                <Navbar.Brand href="#home"></Navbar.Brand>
+                                <Navbar.Brand href="#home">
+                                    <img
+                                        src={require("../images/logo.png")}
+                                        width="200"
+                                        height="50"
+                                        className="d-inline-block align-top"
+                                        alt="St. Jude India ChildCare Centres"
+                                    />
+                                </Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto" >

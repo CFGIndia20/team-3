@@ -28,7 +28,10 @@ class Add_Question extends React.Component{
       }
 
       handleSubmit(e) {
-        this.setState({ name: this.state.modalInputName });
+        this.setState({ 
+          name: this.state.modalInputName,
+          uid: this.state.modalInputUId
+        });
         this.modalClose();
       }
       modalOpen() {
@@ -59,6 +62,15 @@ class Add_Question extends React.Component{
           <Modal show={this.state.modal} handleClose={e => this.modalClose(e)} className="modal-lg" style={mystyle}>
           <h2>Hello Admin</h2>
           <div className="form-group col-md-12" >
+          <label>Enter unit id:</label>
+            <input
+              type="text"
+              value={this.state.modalInputUId}
+              name="modalInputUId"
+              onChange={e => this.handleChange(e)}
+              className="form-control"
+            />
+            <br />
             <label>Enter a new Feedback Question:</label>
             <input
               type="text"
