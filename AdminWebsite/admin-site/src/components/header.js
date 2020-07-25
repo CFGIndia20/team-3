@@ -15,7 +15,7 @@ function Header(){
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto" >
-                                    <Nav.Link href="/" style={{paddingRight:"30px"}}>Home</Nav.Link>
+                                    <Nav.Link href="/app" style={{paddingRight:"30px"}}>Home</Nav.Link>
                                     <Nav.Link href="/patients-list" activeClassName="active" style={{paddingRight:"30px"}}>Patients-List</Nav.Link>
                                     <Nav.Link href="/donors-list" style={{paddingRight:"30px"}}>Donors-List</Nav.Link>
                                     <Nav.Link href="/questionare" style={{paddingRight:"30px"}}>Feedback Questionare</Nav.Link>
