@@ -3,6 +3,8 @@ import { Navbar,Nav,Form,FormControl,Button,NavbarBrand } from 'react-bootstrap'
 const hStyle = { color: 'white' };
 
 function Footer() {
+  if (window.location.pathname === '/') return null;
+
   return(
     <div className="fixed-bottom">  
         <Navbar bg="dark" >

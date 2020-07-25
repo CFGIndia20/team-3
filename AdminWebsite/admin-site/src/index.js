@@ -17,10 +17,12 @@ import Footer from '../src/components/footer';
 import  "bootstrap/dist/css/bootstrap.min.css";
 const routing = (
   <Router>
+
     <div>
       <Header />
       <hr />
       <Switch>
+
         <Route exact path="/" component={App} />
         
       </Switch>
@@ -29,6 +31,6 @@ const routing = (
   </Router>
 );
 ReactDOM.render(
-  routing,
+  <Login/>,
   document.getElementById('root')
 );

@@ -2,7 +2,8 @@ import React from 'react'
 import { Navbar,Nav } from 'react-bootstrap'
   
 function Header(){
-  
+ if (window.location.pathname === '/') return null;
+ 
   return (
     <div>
                 <div className="row">
