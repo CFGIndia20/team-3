@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router, Switch,Link,Redirect } from 'react-rout
 import App from '../App.js';
 import Button from 'react-bootstrap/Button';
 import { useHistory } from 'react-router-dom';
+import { Header, Image} from "semantic-ui-react";
 
 
 class Login extends Component {
@@ -27,8 +28,8 @@ class Login extends Component {
     render() {
 
         const mystyle = {
-            paddingLeft:"550px  ",
-            paddingTop:"100px",
+            //paddingLeft:"550px  ",
+            //paddingTop:"100px",
             fontFamily: "Arial",
             textAlign:"center",
 
@@ -38,9 +39,11 @@ class Login extends Component {
           
 
         return (
-            <div className="row" style={{ backgroundColor:"blue"
-        }}>
-            <div >
+            <div>
+            <Header as="h2">
+                <Image src={require("../images/logo.png")} />
+            </Header>
+            <div style={{textAlign:"center", marginTop:"250px"}}>
                 <form style={mystyle} >
                     <h3>Admin Login</h3>
                     <br/>
@@ -64,7 +67,7 @@ class Login extends Component {
                   
                 </form>
                 </div>
-             </div>
+                </div>
             );
     
            
