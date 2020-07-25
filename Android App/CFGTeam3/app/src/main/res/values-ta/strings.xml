@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CFGTeam3</string>
+    <string name="admin_login">நிர்வாகி உள்நுழைவு</string>
+    <string name="submit">சமர்ப்பிக்கவும்</string>
+    <string name="thank_you_for_the_feedback">கருத்துக்கு நன்றி!</string>
+    <string name="finish">பூச்சு</string>
+    <string name="feedback_message">வணக்கம்! செயின்ட் ஜூட் இந்தியா குழந்தை பராமரிப்பு மையங்கள் உங்களுக்கு உதவ மகிழ்ச்சியாக உள்ளன. உங்கள் மதிப்புமிக்க கருத்தை எங்களுக்கு வழங்க தயவுசெய்து ஒரு நிமிடம் எடுத்துக் கொள்ளுங்கள்!</string>
+    <string name="q1">வாழ்க்கை ஏற்பாடுகள்</string>
+    <string name="q2">சமையலறை வசதிகள்</string>
+    <string name="q3">குளியலறை வசதிகள்</string>
+    <string name="q4">ஊட்டச்சத்து சப்ளிமெண்ட்ஸ்</string>
+    <string name="q5">நோய்த்தொற்று கட்டுப்பாட்டு நடவடிக்கைகள்</string>
+</resources>

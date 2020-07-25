@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CFGTeam3</string>
+    <string name="admin_login">Admin Login</string>
+    <string name="submit">Submit</string>
+    <string name="thank_you_for_the_feedback">Thank You for the Feedback!</string>
+    <string name="finish">Finish</string>
+    <string name="feedback_message">Hi! St. Jude India ChildCare Centres is elated to help you. Kindly take a minute to provide us with your valuable feedback!</string>
+    <string name="q1">Living Arrangements</string>
+    <string name="q2">Kitchen Facilities</string>
+    <string name="q3">Bathroom Facilities</string>
+    <string name="q4">Nutritional Supplements</string>
+    <string name="q5">Infection Control Measures</string>
+</resources>
