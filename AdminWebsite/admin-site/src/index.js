@@ -11,6 +11,7 @@ import Login from './components/Login';
 import Add_Question from './components/add_question.js';
 import Header from '../src/components/header';
 import Footer from '../src/components/footer';
+import FeedbackVisualization from '../src/components/FeedbackVisualization.js';
 
 const routing = (
   <Router>
@@ -26,6 +27,8 @@ const routing = (
         <Route exact path="/patients-list" component={Patients} />
         <Route exact path="/donors-list" component={Donors} />
         <Route exact path="/questionare" component={Add_Question} />
+        <Route exact path="/feedback" component={FeedbackVisualization} />
+
 
       </Switch>
       <Footer />
