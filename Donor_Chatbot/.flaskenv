@@ -1,0 +1,2 @@
+FLASK_APP=whatsapp_chatbot.py
+FLASK_ENV=development
