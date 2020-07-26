@@ -1,3 +1,5 @@
+WHATSAPP BOT STARTING STEPS
+
 Start the flask server by running command "python whatsapp_chatbot.py" in the Donor
 
 Install ngrok to your device and start the server by running command ngrok http localhost:5000 in the ngrok command prompt
