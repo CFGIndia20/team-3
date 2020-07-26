@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {Modal} from 'react-bootstrap';
 import  "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
 class Add_Question extends React.Component{
     
@@ -28,10 +29,19 @@ class Add_Question extends React.Component{
       }
 
       handleSubmit(e) {
+        e.preventDefault();
         this.setState({ 
-          name: this.state.modalInputName,
-          uid: this.state.modalInputUId
+          question: this.state.modalInputName,
+          u_id: this.state.modalInputUId
         });
+        console.log(this.state)
+        axios.post("http://localhost:4000/questionaire",this.state)
+          .then(response => {
+            console.log(response)
+          })
+          .catch(error => {
+            console.log(error)
+          })
         this.modalClose();
       }
       modalOpen() {

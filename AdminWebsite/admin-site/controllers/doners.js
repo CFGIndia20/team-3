@@ -3,7 +3,7 @@ obj.getdoners=(req,res,next)=>{
 
   pool.getConnection(function(err, connection) {
   if (err) next(err);
-  connection.query('SELECT * from doners', function (error, results, fields) {
+  connection.query('SELECT * from donars', function (error, results, fields) {
     connection.release();
     if(error){
       console.log(error);
