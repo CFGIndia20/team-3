@@ -43,7 +43,7 @@ class Login extends Component {
             <Header as="h2">
                 <Image src={require("../images/logo.png")} />
             </Header>
-            <div style={{textAlign:"center", marginTop:"250px"}}>
+            <div style={{textAlign:"center", marginTop:"50px"}}>
                 <form style={mystyle} >
                     <h3>Admin Login</h3>
                     <br/>
