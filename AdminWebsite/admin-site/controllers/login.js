@@ -2,62 +2,17 @@ var moment = require('moment');
 const passport=require('passport');
 var obj={};
 
-obj.getlogin=(req,res)=>{
-  if(req.isAuthenticated()){
-    res.redirect('/dashboard');
-  }
-  else{
-    res.render('login');
-  }
-};
-
+// submitting the login form
 obj.submitlogin=(req,res,next)=>{
 if(!req.body.username||!req.body.password){
   res.redirect('/login');
 }
   passport.authenticate('local',{
-    successRedirect:'/dashboard',
-    failureRedirect:'/login'
+    successRedirect:'localhost:3000/app',
+    failureRedirect:'localhost:3000/'
 })
 }
-
-obj.register=(req,res,next)=>{
-  pool.getConnection(function(err, connection) {
-  if (err) next(err);
-          connection.query(`select * from users where email = ?`,[req.body.email],async (err,result)=>{
-            if(err){
-              connection.release();
-              console.log(err);
-            }
-            else if(result.rows[0]){
-              connection.release();
-              res.status(200).json({data:"Already registered"});
-            }
-            else{
-              if(req.body.password==req.body.password2){
-              var p = await bcrypt.hash(req.body.password,5);
-                connection.query(`insert into users(firstname,lastname,email,password) values(?,?,?,?) returning *`,
-                [req.body.firstname,req.body.lastname,req.body.email,p],function(err,result){
-                  if(err){
-                    console.log(err);
-                    connection.release();
-                  }
-                  else{
-                    console.log(result);
-                    connection.release();
-                    res.status(200).json({
-                      success:"true"
-                    })
-                  }
-                })
-              }
-              }
-    })
-  })
-}
-
-
-
+// Changing the password
 obj.changepassword=(req,res,next)=>{
   var email=req.params.email;
   var token=req.params.token;
@@ -89,6 +44,8 @@ obj.changepassword=(req,res,next)=>{
     })
   })
 }
+
+//Provision of reset token required for the password change
 obj.resettoken=(req,res,next)=>{
   var email=req.body.email;
   pool.getConnection(function(err, connection) {
@@ -120,8 +77,8 @@ obj.resettoken=(req,res,next)=>{
               let transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                user: "",
-                pass: ""
+                user: process.env.GMAIL,
+                pass: process.env.PASSWORD
               },
             });
             transporter.verify(function(err,success){
@@ -133,7 +90,7 @@ obj.resettoken=(req,res,next)=>{
               }
             });
             var options={
-              from:'',
+              from:process.env.Sender,
               to:email,
               subject:'reset passport',
               html:'<h4>Reset your password<h4>'
