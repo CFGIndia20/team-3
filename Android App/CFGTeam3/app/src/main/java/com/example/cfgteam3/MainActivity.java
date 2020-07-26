@@ -1,13 +1,13 @@
 package com.example.cfgteam3;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,50 +16,44 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import java.sql.*;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.*;
+
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    ConnectionClass connectionClass;
     private static final int MY_PERMISSIONS_REQUEST_RECIEVE_SMS=0;
+    private ProgressDialog progressDialog;
+    EditText PatientID,SpaceID;
+    TextView Invalid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setAppLocale("ta");
+        setAppLocale("en");
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        final EditText PatientID =  (EditText) findViewById(R.id.LoginID);
-        final EditText SpaceID =  (EditText) findViewById(R.id.Password);
+
+        PatientID =  (EditText) findViewById(R.id.LoginID);
+        SpaceID =  (EditText) findViewById(R.id.Password);
+
         Button Login = (Button) findViewById(R.id.Login);
         TextView Admin = (TextView) findViewById(R.id.Admin);
-        final TextView Invalid = (TextView) findViewById(R.id.textView3);
+        progressDialog=new ProgressDialog(this);
+        Invalid = (TextView) findViewById(R.id.textView3);
+
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.RECEIVE_SMS},MY_PERMISSIONS_REQUEST_RECIEVE_SMS);
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                connectionClass = new ConnectionClass();
-                Connection conn = connectionClass.CONN();
-                try
-                {
-                    Statement stmt = conn.createStatement();
-                    ResultSet rs = stmt.executeQuery("select * from user where PID='" + PatientID.getText() + "' and SID='" + SpaceID.getText() + "'");
-                    if(rs.next())
-                    {
-                        openFeedbackForm();
-                    }
-                    else
-                    {
-                        Invalid.setText("Invalid Patient ID/Space ID!");
-                    }
-                    conn.close();
-                }
-                catch (Exception e)
-                {
-                    Invalid.setText(e.toString());
-                }
-                openFeedbackForm();
+                login();
             }
         });
         Admin.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +62,42 @@ public class MainActivity extends AppCompatActivity {
                 openAdminLogin();
             }
         });
+    }
+    public void login()
+    {
+        String pid=PatientID.getText().toString().trim();
+        String sid=SpaceID.getText().toString().trim();
+
+        progressDialog.setMessage("Verifying data...");
+        progressDialog.show();
+
+        StringRequest stringRequest=new StringRequest(Request.Method.POST,
+                "http://192.168.0.3/Android/v1/userLogin.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        progressDialog.dismiss();
+                        openFeedbackForm();
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        progressDialog.hide();
+                        Invalid.setText("Invalid Patient ID/Space ID!");
+                    }
+                }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params=new HashMap<>();
+                params.put("PID",pid);
+                params.put("SID",sid);
+                return params;
+            }
+        };
+        RequestQueue requestQueue=Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+        openFeedbackForm();
     }
     public void openAdminLogin()
     {

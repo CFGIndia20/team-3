@@ -1,5 +1,5 @@
 var obj={};
-
+//Displaying all the questions used in the feedback form currently
 obj.getQuestions=(req,res,next)=>{
   pool.getConnection(function(err, connection) {
   if (err) next(err);
@@ -17,7 +17,7 @@ obj.getQuestions=(req,res,next)=>{
   });
   });
 }
-
+//Adding new questions to the feedback form
 obj.postQuestion=(req,res,next)=>{
 
   pool.getConnection(function(err, connection) {
@@ -41,6 +41,7 @@ obj.postQuestion=(req,res,next)=>{
 });
 }
 
+//Deleting the questions for the feedback form
 obj.deleteQuestion=(req,res,next)=>{
 
   pool.getConnection(function(err, connection) {

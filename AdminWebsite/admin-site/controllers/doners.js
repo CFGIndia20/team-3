@@ -1,4 +1,6 @@
 var obj={};
+
+//Listing out all the doners
 obj.getdoners=(req,res,next)=>{
 
   pool.getConnection(function(err, connection) {
@@ -17,11 +19,11 @@ obj.getdoners=(req,res,next)=>{
   });
 });
 }
-
+//Adding a new doner
 obj.adddoner=(req,res,next)=>{
   pool.getConnection(function(err, connection) {
   if (err) next(err);
-  connection.query( "INSERT INTO doners (u_id,name,phone,email,security_code,d_id) values (?,?,?,?,?,?)",[req.body.u_id,req.body.name,req.body.phone,req.body.email,req.body.security_code,req.body.d_id],
+  connection.query( "INSERT INTO donars (u_id,name,phone,email,security_code,d_id) values (?,?,?,?,?,?)",[req.body.u_id,req.body.name,req.body.phone,req.body.email,req.body.security_code,req.body.d_id],
  function (error, results, fields) {
 connection.release();
     if(error){
@@ -35,12 +37,12 @@ connection.release();
 });
 }
 
-
+//Removing a doner information from the database
 obj.deletedoner=(req,res,next)=>{
 
   pool.getConnection(function(err, connection) {
   if (err) next(err);
-  connection.query('Delete from doners where d_id=?',[req.params.id],
+  connection.query('Delete from donars where d_id=?',[req.params.id],
    function (error, results, fields) {
 connection.release();
     if(error){
