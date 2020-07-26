@@ -14,6 +14,12 @@
 <p>3. Backend command: node server.js</p>
 <p>4. Frontend command: npm start</p> 
   
+  Application for parents
+  
+  Whatsapp chatbot for donors to get information
+  
 <p> Drive link for Video Demo</p>
 https://drive.google.com/file/d/1-kEAjUWqF4jMMwu7GeEWr0wk8Q8wHBqT/view?usp=sharing
+
+
 </html>
