@@ -49,7 +49,7 @@ app.use('/questionaire',questionaire);
 app.use('/feedback',feedback);
 app.use('/doners',doners);
 app.use('/',login);
-//
+//==
 setTimeout(function(){
   let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -98,7 +98,7 @@ connection.query('SELECT * from reports', function (error, results, fields) {
     },1000*86400)
   }
 });
-});
+
 
 
 const PORT=process.env.PORT||4000;
