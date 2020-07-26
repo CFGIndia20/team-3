@@ -1,0 +1,11 @@
+﻿SPACE2PATIENT_ID,PATIENT_ID,SPACE_ID,SPACE_CODE,SPACE2PATIENT_DATETIME_BEGIN,SPACE2PATIENT_DATETIME_END,ADMISSION_STATUS,RELEASE_STATUS,FAMILY_NAME,DONATION_USAGE,REPORT
+25810,1960,1288,M19U6-1,23-07-2020 00:00,,Transferee,,Aakansha,"Safe, Hygiene, Transport",https://user-images.githubusercontent.com/57043695/88465371-1d6e8580-cee0-11ea-9506-4946141c40e9.JPG
+25811,4341,406,M19U6-1,24-07-2019 00:00,,Transferee,,Dikshita,"Recreation, Education, Cooking",https://user-images.githubusercontent.com/57043695/88465368-1c3d5880-cee0-11ea-91af-f2073f777c76.JPG
+25812,4050,1291,M19U6-1,25-07-2018 00:00,,Transferee,,Jaya,"Nutrition, Counselling, Child Welfare",https://user-images.githubusercontent.com/57043695/88465369-1d6e8580-cee0-11ea-94d5-50dc3aeb9662.JPG
+25813,4233,1306,M19U6-1,26-07-2017 00:00,,Transferee,,Puspa,"Nutrition, Cooking, Education",
+25814,4087,1285,M19U6-1,27-07-2016 00:00,,Transferee,,Sugam,"Recreation, Transport",
+25815,3696,22,M19U6-1,28-07-2015 00:00,,Transferee,,Tirth,"Safety, Hygiene",
+25816,3616,412,M19U6-1,29-07-2014 00:00,,Transferee,,Kshitij,"Education, Nutrition",
+25817,2530,793,M19U6-1,30-07-2013 00:00,,Transferee,,Saurabh,"Cleanliness Drive, Treatment",
+25818,2766,790,M19U6-1,31-07-2012 00:00,,Transferee,,Harishankar,"Basic amenities to children, Food",
+25819,4329,739,M19U6-1,01-08-2011 00:00,,Transferee,,Parth,"Recreation, Education, Cooking",
