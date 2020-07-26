@@ -12,7 +12,7 @@ if(!req.body.username||!req.body.password){
     failureRedirect:'localhost:3000/'
 })
 }
-// Changing the password
+// Additional feature for Changing the password for admin
 obj.changepassword=(req,res,next)=>{
   var email=req.params.email;
   var token=req.params.token;
