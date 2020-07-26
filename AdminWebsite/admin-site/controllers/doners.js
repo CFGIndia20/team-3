@@ -1,4 +1,6 @@
 var obj={};
+
+//Listing out all the doners
 obj.getdoners=(req,res,next)=>{
 
   pool.getConnection(function(err, connection) {
@@ -17,7 +19,7 @@ obj.getdoners=(req,res,next)=>{
   });
 });
 }
-
+//Adding a new doner
 obj.adddoner=(req,res,next)=>{
   pool.getConnection(function(err, connection) {
   if (err) next(err);
@@ -35,7 +37,7 @@ connection.release();
 });
 }
 
-
+//Removing a doner information from the database
 obj.deletedoner=(req,res,next)=>{
 
   pool.getConnection(function(err, connection) {

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -18,33 +19,17 @@ public class AdminLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
-        EditText PatientID =  (EditText) findViewById(R.id.LoginID);
-        EditText SpaceID =  (EditText) findViewById(R.id.Password);
+        TextView Invalid = (TextView) findViewById(R.id.textView3);
+        EditText LoginID =  (EditText) findViewById(R.id.LoginID);
+        EditText Password =  (EditText) findViewById(R.id.Password);
         Button Login = (Button) findViewById(R.id.Login);
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-/*                connectionClass = new ConnectionClass();
-                Connection conn = connectionClass.CONN();
-                try
-                {
-                    Statement stmt = conn.createStatement();
-                    ResultSet rs = stmt.executeQuery("select * from user where PID='" + PatientID.getText() + "' and SID='" + SpaceID.getText() + "'");
-                    if(rs.next())
-                    {
-                        openFeedbackForm();
-                    }
-                    else
-                    {
-                        Invalid.setText("Invalid Patient ID/Space ID!");
-                    }
-                    conn.close();
-                }
-                catch (Exception e)
-                {
-                    Invalid.setText(e.toString());
-                }
-  */              openUserDetails();
+                if (LoginID.getText().toString().equals("Admin") && Password.getText().toString().equals("Admin"))
+                    openUserDetails();
+                else
+                    Invalid.setText("Invalid Login ID/Password!");
             }
         });
     }

@@ -4,7 +4,7 @@ var router = express.Router();
 const obj=require('../controllers/feedback');
 
 router
-.route('/feedback')
+.route('/')
 .get(obj.getfeedbacks);
 
 module.exports=router;
