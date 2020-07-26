@@ -7,4 +7,5 @@
 <p>For fetching the donors data <strong>https://cfgapis.000webhostapp.com/index.php?name=donors</strong></p>
 <p>For fetching the feedback ratings <strong>https://cfgapis.000webhostapp.com/index.php?name=feedback</strong></p>
 <p>For fetching the feedback questions <strong>https://cfgapis.000webhostapp.com/index.php?name=question</strong></p>
+<p>For fetching the reports history <strong>https://cfgapis.000webhostapp.com/index.php?name=reports</strong></p>
 </html>
