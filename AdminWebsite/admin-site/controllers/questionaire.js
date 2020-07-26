@@ -23,7 +23,7 @@ obj.postQuestion=(req,res,next)=>{
   pool.getConnection(function(err, connection) {
   if (err) next(err);
 
-  connection.query("INSERT INTO questions (u_id,q_id,question) values (?,?,?)",[req.body.u_id,req.body.q_id,req.body.question], function (error, results, fields) {
+  connection.query("INSERT INTO questions (u_id,q_id,question) values (?,?,?)",[req.body.u_id,req.body.q_id,req.body.question,req.body.rating], function (error, results, fields) {
 
     if(error){
       console.log(error);
