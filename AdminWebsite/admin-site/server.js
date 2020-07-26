@@ -7,6 +7,7 @@ const path = require('path');
 const passport=require('passport');
 var bcrypt=require('bcryptjs');
 var flash = require('connect-flash');
+const nodemailer = require("nodemailer");
 dotenv.config({path:'./config/config.env'});
 
 
@@ -81,10 +82,11 @@ connection.query('SELECT * from reports', function (error, results, fields) {
 
   else{
     var options={
-      from:'process.env.SENDER',
-      to:process.env.receiver,
-      subject:'reset passport',
-      html:`<h4>${results.no_of_days}<h4> <br>
+      from:'process.env.GMAIL',
+      to:process.env.RECEIVER,
+      subject:'report information',
+      html:`This is the updated report
+      <h4>${results.no_of_days}<h4> <br>
       <h4> ${results.no_of_families}<h4> <br>
       <h4> ${results.unit}<h4> <br>`
 
@@ -93,12 +95,16 @@ connection.query('SELECT * from reports', function (error, results, fields) {
       if(err){
         console.log(err);
       }
+      else{
+        console.log("sent");
+      }
     })
     }
-    },1000*86400)
-  }
+
+
+  });
 });
-});
+},1000*60*7);
 
 
 const PORT=process.env.PORT||4000;

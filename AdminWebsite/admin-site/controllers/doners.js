@@ -9,7 +9,6 @@ obj.getdoners=(req,res,next)=>{
     connection.release();
     if(error){
       console.log(error);
-      connection.release();
       next(error);
     }
 
