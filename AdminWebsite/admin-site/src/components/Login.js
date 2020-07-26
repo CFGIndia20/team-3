@@ -21,7 +21,7 @@ class Login extends Component {
        
     };
     submit = () => {
-        alert(this);
+        window.location.replace("http://localhost:3000/app");
        }
         
       
@@ -49,8 +49,8 @@ class Login extends Component {
                     <br/>
     
                     <div className="form-group" style={{textAlign:"left"}}>
-                        <label >Email address</label>
-                        <input type="email" className="form-control" placeholder="Enter email"
+                        <label >User Name</label>
+                        <input type="text" className="form-control" placeholder="Enter username"
                         value={this.state.email} onChange={this.onEmailChange.bind(this)}
                         />
                     </div>

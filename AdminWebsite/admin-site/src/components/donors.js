@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Component} from "react";
 import { Table } from 'semantic-ui-react'
 
 class Donors extends Component {
@@ -33,18 +33,20 @@ class Donors extends Component {
                      <Table.HeaderCell>Email Id</Table.HeaderCell>
                  </Table.Row>
              </Table.Header>
-
              <Table.Body>
-                 <Table.Row key={list.d_id}> 
-                     <Table.Cell>{list.d_id}</Table.Cell>
-                     <Table.Cell>{list.u_id}</Table.Cell>
-                     <Table.Cell>{list.name}</Table.Cell>
-                     <Table.Cell>{list.phone}</Table.Cell>
-                     <Table.Cell>{list.email}</Table.Cell>
+            {list.map((item) => (
+                 <Table.Row key={item.d_id}> 
+                     <Table.Cell>{item.d_id}</Table.Cell>
+                     <Table.Cell>{item.u_id}</Table.Cell>
+                     <Table.Cell>{item.name}</Table.Cell>
+                     <Table.Cell>{item.phone}</Table.Cell>
+                     <Table.Cell>{item.email}</Table.Cell>
                  </Table.Row>
-             </Table.Body>
-         </Table>
-     );
-};
+            ))}
+            </Table.Body>
+            </Table>
+            );
+          }
+
 }
 export default Donors;

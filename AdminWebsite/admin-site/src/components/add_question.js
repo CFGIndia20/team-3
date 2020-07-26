@@ -11,8 +11,8 @@ class Add_Question extends React.Component{
     
         this.state = {
           modal: false,
-          name: "",
-          modalInputName: ""
+          question: "",
+          u_id: ""
         };
        
     };
@@ -50,7 +50,8 @@ class Add_Question extends React.Component{
     
       modalClose() {
         this.setState({
-          modalInputName: "",
+          question: "",
+          u_id: "",
           modal: false
         });
       }
@@ -76,7 +77,7 @@ class Add_Question extends React.Component{
             <input
               type="text"
               value={this.state.modalInputUId}
-              name="modalInputUId"
+              name="u_id"
               onChange={e => this.handleChange(e)}
               className="form-control"
             />
@@ -85,7 +86,7 @@ class Add_Question extends React.Component{
             <input
               type="text"
               value={this.state.modalInputName}
-              name="modalInputName"
+              name="question"
               onChange={e => this.handleChange(e)}
               className="form-control"
             />
